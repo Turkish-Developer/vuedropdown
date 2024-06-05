@@ -1,0 +1,44 @@
+{
+  "name": "@turkishdevelopers/vue-dropdown",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/vue-dropdown.umd.cjs",
+  "module": "./dist/vue-dropdown.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/style.css",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-dropdown.js",
+      "require": "./dist/vue-dropdown.umd.js",
+      "types": "./dist/index.d.ts",
+      "style": "./dist/style.css"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "npx tailwind -i src/style.css -o src/index.css&&vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.1",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1",
+    "vue-tsc": "^2.0.6"
+  }
+}
